@@ -285,15 +285,13 @@ export default function StrategicGrowthFundPage() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="2.2"
+                  strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   aria-hidden="true"
                 >
-                  <line x1="6" y1="4" x2="18" y2="4"></line>
-                  <line x1="6" y1="9" x2="18" y2="9"></line>
-                  <path d="M6 4h5.5a3.5 3.5 0 0 1 0 7H6"></path>
-                  <path d="M8.5 11.5L16 20"></path>
+                  <path d="M18 5h-11h3a4 4 0 0 1 0 8h-3l6 6" />
+                  <path d="M7 9h11" />
                 </svg>
               </div>
               <h3 className="card-title">&#8377;50 Cr + &#8377;50 Cr Green Shoe</h3>
