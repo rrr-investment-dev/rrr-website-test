@@ -213,7 +213,6 @@ export default function StrategicGrowthFundPage() {
             <div className="fund-info-left">
               {/* Category Pill Badge */}
               <div className="fund-category-pill">
-                <span className="pulse-dot" aria-hidden="true" />
                 <span className="pill-text">
                   <strong>Category II</strong> Alternative Investment Fund (AIF)
                 </span>
@@ -279,7 +278,23 @@ export default function StrategicGrowthFundPage() {
             <div className="fund-highlight-card featured">
               <div className="card-top-accent">
                 <span className="card-badge">TARGET CORPUS</span>
-                <span className="card-pulse-live"></span>
+                <svg
+                  className="card-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <line x1="6" y1="4" x2="18" y2="4"></line>
+                  <line x1="6" y1="9" x2="18" y2="9"></line>
+                  <path d="M6 4h5.5a3.5 3.5 0 0 1 0 7H6"></path>
+                  <path d="M8.5 11.5L16 20"></path>
+                </svg>
               </div>
               <h3 className="card-title">&#8377;50 Cr + &#8377;50 Cr Green Shoe</h3>
               <p className="card-subtext">Base fund size with flexible expansion allocation</p>
