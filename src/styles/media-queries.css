@@ -1,0 +1,103 @@
+/* =============================================
+   CENTRAL BREAKPOINTS DEFINITIONS
+   ============================================= */
+
+@custom-media --xs (min-width: 425px);
+@custom-media --sm (min-width: 640px);
+@custom-media --md (min-width: 768px);
+@custom-media --lg (min-width: 1024px);
+@custom-media --xl (min-width: 1280px);
+@custom-media --xxl (min-width: 1600px);
+
+/* Downward responsive helpers */
+@custom-media --md-down (max-width: 767px);
+
+/* =============================================
+   CENTRAL RESPONSIVE TYPOGRAPHY & LAYOUT SYSTEM
+   (Adapted from Sumeru Funds system using Noto Sans)
+   ============================================= */
+
+:root {
+  /* Font Family - Pure Noto Sans */
+  --font-family-base: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Number Lining for financial data & tables */
+  font-feature-settings: "lnum" 1;
+
+  /* Unified Maximum Content Width */
+  --container-max: 1200px;
+
+  /* Default Mobile Horizontal Gutter (< 425px) */
+  --gutter-h: 16px;
+  --container-padding: var(--gutter-h);
+
+  /* Fluid Scaling Headings (Sumeru Funds clamp math) */
+  --fs-hero: clamp(2.3rem, 1.9rem + 2.2vw, 3.4rem);   /* 37.4px mobile -> 54.4px desktop */
+  --fs-h2: clamp(1.6rem, 1.35rem + 1.3vw, 2.35rem);   /* 25.7px mobile -> 37.6px desktop */
+
+  /* Modular Rem Typography Scale (based on 16px root) */
+  --fs-h3: 1.15rem;           /* 18.4px - Subheadings / Card Titles */
+  --fs-sub: 1.15rem;          /* 18.4px - Lead Paragraphs / Subtitles */
+  --fs-card: 1.15rem;         /* 18.4px - Inner Card Headers */
+  --fs-body: 1rem;            /* 16.0px - Standard Body Copy */
+  --fs-body-sm: 0.875rem;     /* 14.0px - Secondary Copy / Details */
+  --fs-stat: 1.3rem;          /* 20.8px - Metric Counters (tabular-nums) */
+  --fs-badge: 0.78rem;        /* 12.5px - Status Pills & Badges */
+  --fs-caption: 0.72rem;      /* 11.5px - Eyebrows & Overlines (uppercase) */
+  --fs-eyebrow: 0.72rem;      /* 11.5px */
+  --fs-micro: 11px;           /* 11.0px - Metadata / Small labels */
+  --fs-legal: 12px;           /* 12.0px - Footnotes & Disclaimers */
+
+  --text-heading-lg: var(--fs-h2);
+  --text-heading-md: var(--fs-h3);
+}
+
+@media (--xs) {
+  :root {
+    --gutter-h: 20px;
+    --container-padding: var(--gutter-h);
+  }
+}
+
+@media (--sm) {
+  :root {
+    --gutter-h: 24px;
+    --container-padding: var(--gutter-h);
+  }
+}
+
+@media (--md) {
+  :root {
+    --gutter-h: 40px;
+    --container-padding: var(--gutter-h);
+  }
+}
+
+@media (--lg) {
+  :root {
+    --gutter-h: 48px;
+    --container-padding: max(48px, calc((100vw - var(--container-max)) / 2));
+  }
+}
+
+@media (--xl) {
+  :root {
+    --gutter-h: 48px;
+    --container-padding: max(48px, calc((100vw - var(--container-max)) / 2));
+  }
+}
+
+@media (--xxl) {
+  :root {
+    --gutter-h: 48px;
+    --container-padding: max(48px, calc((100vw - var(--container-max)) / 2));
+  }
+}
+
+/* Central Page Container */
+.page-container {
+  width: 100%;
+  margin-inline: auto;
+  box-sizing: border-box;
+  padding-inline: var(--container-padding);
+}

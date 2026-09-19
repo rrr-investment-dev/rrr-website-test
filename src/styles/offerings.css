@@ -1,0 +1,639 @@
+/* =============================================
+   OFFERINGS PAGE STYLES — RRR Strategic Growth Fund
+   Master Responsive Design & Flush Grid Alignment
+   Breakpoints: Base (<640px), --sm (≥640px), --md (≥768px), 
+                --lg (≥1024px), --xl (≥1280px), --xxl (≥1600px)
+   ============================================= */
+
+/* =============================================
+   1. ROOT & WRAPPER
+   ============================================= */
+
+.fund-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  background-color: #002266;
+  background-image: 
+    radial-gradient(ellipse 80% 60% at 75% 20%, rgba(0, 85, 230, 0.28) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(0, 45, 128, 0.35) 0%, transparent 60%),
+    linear-gradient(180deg, #001f5c 0%, #00338d 50%, #002266 100%),
+    url("/assets/Images/offerings_bg.png");
+  background-size: 100% 100%, 100% 100%, 100% 100%, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: clamp(150px, 19vh, 220px);
+  padding-bottom: clamp(50px, 7vh, 80px);
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: var(--font-family-base, "Noto Sans", sans-serif);
+}
+
+/* Constellation Canvas Overlay */
+.fund-canvas-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ambient Radial Glow Elements */
+.fund-ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(80px);
+  opacity: 0.45;
+}
+
+.glow-top-right {
+  top: -10%;
+  right: -5%;
+  width: min(500px, 60vw);
+  height: min(500px, 60vw);
+  background: radial-gradient(circle, rgba(64, 140, 255, 0.35) 0%, transparent 70%);
+}
+
+.glow-bottom-left {
+  bottom: -10%;
+  left: -5%;
+  width: min(450px, 55vw);
+  height: min(450px, 55vw);
+  background: radial-gradient(circle, rgba(0, 72, 190, 0.4) 0%, transparent 70%);
+}
+
+/* Content Container - Aligns with Header using site-wide --container-padding */
+.fund-content-container {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding-inline: var(--container-padding);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(38px, 6vh, 68px);
+}
+
+
+/* =============================================
+   2. HERO SECTION & TYPOGRAPHY
+   ============================================= */
+
+.fund-hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+}
+
+.fund-info-left {
+  width: 100%;
+  text-align: left;
+}
+
+/* Category Pill Badge */
+.fund-category-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-bottom: clamp(14px, 2.2vh, 20px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #58a6ff;
+  box-shadow: 0 0 8px #58a6ff;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  border: 1px solid rgba(88, 166, 255, 0.6);
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.pill-text {
+  font-size: clamp(11.5px, 1.2vw, 13px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.pill-text strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Fund Display Main Title */
+.fund-main-title {
+  font-family: "Cinzel", "Playfair Display", Georgia, serif;
+  font-size: clamp(28px, 4.4vw, 54px);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0 0 clamp(16px, 2.5vh, 24px) 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Fund Tagline / Quote Block */
+.fund-tagline {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  max-width: 680px;
+  margin: 0;
+}
+
+.tagline-bar {
+  width: 2.5px;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.2) 100%);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.fund-tagline p {
+  font-family: var(--font-family-base, "Noto Sans", sans-serif);
+  font-style: italic;
+  font-size: clamp(13px, 1.4vw, 16px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  font-weight: 400;
+}
+
+
+/* =============================================
+   3. CTA BUTTON & ACTIONS
+   ============================================= */
+
+.fund-cta-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.fund-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  font-family: var(--font-family-base, "Noto Sans", sans-serif);
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.fund-cta-btn.primary {
+  width: 100%;
+  background: #ffffff;
+  color: #00338d;
+  font-size: clamp(13.5px, 1.3vw, 15px);
+  padding: clamp(13px, 1.6vh, 15px) clamp(22px, 2.2vw, 32px);
+  box-shadow: 0 4px 20px rgba(0, 20, 60, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.fund-cta-btn.primary .cta-arrow {
+  transition: transform 0.25s ease;
+}
+
+.fund-cta-btn.primary:hover {
+  background: #f4f8ff;
+  color: #002266;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35), 0 0 24px rgba(255, 255, 255, 0.3);
+}
+
+.fund-cta-btn.primary:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+.fund-cta-btn.primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 20, 60, 0.2);
+}
+
+
+/* =============================================
+   4. HIGHLIGHTS BENTO CARDS
+   ============================================= */
+
+.fund-highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  width: 100%;
+}
+
+.fund-highlight-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: clamp(16px, 2vh, 22px) clamp(16px, 1.8vw, 24px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fund-highlight-card:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 25, 75, 0.35), 0 0 16px rgba(255, 255, 255, 0.12);
+}
+
+.fund-highlight-card.interactive {
+  cursor: pointer;
+}
+
+.fund-highlight-card.interactive:focus-visible {
+  outline: 2px solid #58a6ff;
+  outline-offset: 2px;
+}
+
+.card-top-accent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(180, 215, 255, 0.9);
+}
+
+.card-icon {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card-pulse-live {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 8px #34d399;
+}
+
+.card-action-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.fund-highlight-card.interactive:hover .card-action-indicator {
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+.card-title {
+  font-family: var(--font-family-base, "Noto Sans", sans-serif);
+  font-size: clamp(14px, 1.4vw, 17px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.02em;
+}
+
+.card-subtext {
+  font-size: clamp(11.5px, 1.1vw, 13px);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+/* =============================================
+   5. POPUPS & MODALS
+   ============================================= */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  background: rgba(0, 18, 54, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+
+.popup-content {
+  background: #ffffff;
+  padding: clamp(24px, 4vw, 36px);
+  border-radius: 16px;
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  max-height: min(88vh, 88dvh);
+  overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(0, 20, 60, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  transform: translateY(12px) scale(0.98);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.popup-overlay.active .popup-content {
+  transform: translateY(0) scale(1);
+}
+
+.popup-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.popup-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #00338d;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.popup-main-heading {
+  font-family: var(--font-family-base, "Noto Sans", sans-serif);
+  font-size: clamp(20px, 3vw, 24px);
+  font-weight: 700;
+  color: #0a192f;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.popup-desc {
+  font-size: 13.5px;
+  color: #4a5568;
+  line-height: 1.5;
+  margin: 8px 0 0 0;
+}
+
+.close-popup {
+  background: #f1f5f9;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.close-popup:hover {
+  background: #e2e8f0;
+  color: #00338d;
+  transform: rotate(90deg);
+}
+
+.form-container {
+  width: 100%;
+}
+
+/* Strategic Themes Modal Variations */
+.themes-popup-content {
+  max-width: 740px;
+}
+
+.themes-grid-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.theme-modal-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 18px;
+  transition: all 0.2s ease;
+}
+
+.theme-modal-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 16px rgba(0, 51, 141, 0.08);
+  transform: translateY(-1px);
+}
+
+.theme-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.theme-number {
+  font-size: 12px;
+  font-weight: 800;
+  color: #00338d;
+  letter-spacing: 0.05em;
+}
+
+.theme-pill-badge {
+  font-size: 11px;
+  font-weight: 600;
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+
+.theme-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.theme-card-desc {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.themes-popup-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/* =============================================
+   6. RESPONSIVE BREAKPOINT TIERS
+   ============================================= */
+
+/* Small Tablet & Large Mobile (≥ 640px) */
+@media (--sm) {
+  .fund-page-wrapper {
+    padding-top: clamp(160px, 20vh, 230px);
+  }
+
+  .fund-highlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Tablet & Desktop (≥ 768px) */
+@media (--md) {
+  .fund-page-wrapper {
+    padding-top: clamp(170px, 21vh, 240px);
+  }
+
+  .fund-hero-section {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 32px;
+  }
+
+  .fund-cta-right {
+    justify-content: flex-end;
+    width: auto;
+    margin-bottom: 6px;
+  }
+
+  .fund-cta-btn.primary {
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .themes-grid-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  
+  .theme-modal-card:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* Desktop (≥ 1024px) */
+@media (--lg) {
+  .fund-page-wrapper {
+    padding-top: clamp(180px, 22vh, 250px);
+  }
+
+  .fund-content-container {
+    gap: clamp(44px, 7vh, 76px);
+  }
+
+  .fund-highlights-grid {
+    gap: 20px;
+  }
+}
+
+/* Large Desktop (≥ 1280px) */
+@media (--xl) {
+  .fund-page-wrapper {
+    padding-top: clamp(190px, 23vh, 260px);
+  }
+
+  .fund-content-container {
+    gap: clamp(48px, 8vh, 84px);
+  }
+
+  .fund-highlights-grid {
+    gap: 24px;
+  }
+}
+
+
+/* =============================================
+   7. FOOTER COHESION FOR OFFERINGS PAGE
+   ============================================= */
+.main-container:has(.fund-page-wrapper)+.footer {
+  margin-top: 0 !important;
+  background: #002266 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.main-container:has(.fund-page-wrapper)+.footer .footer-brand-section {
+  background: transparent !important;
+}
+
+.main-container:has(.fund-page-wrapper)+.footer .footer-text-logo {
+  filter: brightness(0) invert(1) !important;
+}
