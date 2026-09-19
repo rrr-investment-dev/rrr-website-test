@@ -1,5 +1,5 @@
 /* =============================================
-   OFFERINGS PAGE STYLES — RRR Strategic Growth Fund
+   OFFERINGS PAGE STYLES - RRR Strategic Growth Fund
    Master Responsive Design & Flush Grid Alignment
    Breakpoints: Base (<640px), --sm (≥640px), --md (≥768px), 
                 --lg (≥1024px), --xl (≥1280px), --xxl (≥1600px)
@@ -15,7 +15,7 @@
   min-height: 100dvh;
   width: 100%;
   background-color: #002266;
-  background-image: 
+  background-image:
     radial-gradient(ellipse 80% 60% at 75% 20%, rgba(0, 85, 230, 0.28) 0%, transparent 70%),
     radial-gradient(ellipse 60% 50% at 20% 80%, rgba(0, 45, 128, 0.35) 0%, transparent 60%),
     linear-gradient(180deg, #001f5c 0%, #00338d 50%, #002266 100%),
@@ -548,7 +548,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
   }
-  
+
   .theme-modal-card:last-child {
     grid-column: span 2;
   }

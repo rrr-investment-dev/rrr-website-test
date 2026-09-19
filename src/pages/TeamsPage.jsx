@@ -125,13 +125,13 @@ export default function TeamsPage() {
           <span className="our-team-title">Our Team</span>
           <p className="our-team-desc">
             We are a collective of{" "}
-            <span className="highlight-blue">sharp minds and steady hands</span>{" "}
-            — investors, researchers, and strategists united by one goal:{" "}
+            <span className="highlight-blue">sharp minds and steady hands </span>
+            investors, researchers, and strategists united by one goal{" "}
             <span className="highlight-blue">to turn insight into action</span>.
             With deep domain expertise and a relentless curiosity for what’s
             next, we navigate complexity with clarity. At RRR, our strength lies
             not just in numbers, but in the conviction to lead where others
-            follow —{" "}
+            follow,{" "}
             <span className="highlight-blue">
               designing strategies that endure, and delivering outcomes that
               matter

@@ -1,5 +1,5 @@
 /* =============================================
-   DYNAMIC INQUIRY FORM STYLES — RRR Investments
+   DYNAMIC INQUIRY FORM STYLES - RRR Investments
    ============================================= */
 
 .dynamic-form {
@@ -232,6 +232,7 @@
     transform: scale(0.6);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -242,6 +243,7 @@
   0% {
     background-position: 200% 0;
   }
+
   100% {
     background-position: -200% 0;
   }

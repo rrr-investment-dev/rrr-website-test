@@ -170,7 +170,7 @@ export default function HomePage() {
                 <div className="infographic-card-content">
                   <span>Lean. Focused. Fast.</span>
                   <p>
-                    RRR explores what others can’t — under-researched equities,
+                    RRR explores what others can’t under-researched equities,
                     emerging sectors, and special situations.
                   </p>
                 </div>
@@ -190,7 +190,7 @@ export default function HomePage() {
               <div className="infographic-card forth-card">
                 <div className="infographic-card-content">
                   <p>
-                    With RRR, you’re not only<br className="mobile-only-br" /> invested —{" "}
+                    With RRR, you’re not only<br className="mobile-only-br" /> invested,{" "}
                     <span>
                       you’re<br className="mobile-only-br" /> equipped.
                     </span>

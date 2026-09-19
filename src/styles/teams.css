@@ -28,27 +28,30 @@
 
 .our-team {
   width: 100%;
+  max-width: 100%;
   text-align: left;
 }
 
 .our-team-title {
   display: block;
-  font-size: 18px;
+  font-size: 26px;
   font-weight: 700;
+  letter-spacing: -0.01em;
   color: #00338d;
-  margin-bottom: 12px;
+  line-height: 1.25;
+  margin: 0 0 14px 0;
   font-family: var(--font-family-base);
 }
 
 .our-team-desc {
   width: 100%;
   max-width: 100%;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 400;
-  color: #000;
-  line-height: 1.7;
+  color: #475569;
+  line-height: 1.6;
   margin: 0;
-  padding-top: 16px;
+  padding-top: 0;
   font-family: var(--font-family-base);
 }
 
@@ -274,12 +277,14 @@
   }
 
   .our-team-title {
-    font-size: 18px;
-    margin-bottom: 14px;
+    font-size: 30px;
+    margin-bottom: 16px;
+    line-height: 1.25;
   }
 
   .our-team-desc {
-    font-size: 15px;
+    font-size: 14.5px;
+    line-height: 1.6;
   }
 
   .team-members-container {
@@ -320,21 +325,20 @@
   }
 
   .our-team {
-    width: 700px;
+    width: 100%;
+    max-width: 720px;
   }
 
   .our-team-title {
-    font-size: 19px;
-    margin-bottom: 8px;
+    font-size: 36px;
+    margin-bottom: 18px;
+    line-height: 1.2;
   }
 
   .our-team-desc {
-    width: 564px;
-    font-size: 18px;
-  }
-
-  .highlight-blue {
-    font-size: 18px;
+    width: 100%;
+    font-size: 15.5px;
+    line-height: 1.65;
   }
 
   .team-members-container {
@@ -375,22 +379,20 @@
   }
 
   .our-team {
-    width: 900px;
+    width: 100%;
+    max-width: 800px;
   }
 
   .our-team-title {
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.18;
   }
 
   .our-team-desc {
-    width: 600px;
-    font-size: 19px;
-    line-height: 1.7;
-  }
-
-  .highlight-blue {
-    font-size: 19px;
+    width: 100%;
+    font-size: 17px;
+    line-height: 1.65;
   }
 
   .team-members-container {
@@ -431,21 +433,20 @@
   }
 
   .our-team {
-    width: 850px;
+    width: 100%;
+    max-width: 860px;
   }
 
   .our-team-title {
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 46px;
+    margin-bottom: 22px;
+    line-height: 1.15;
   }
 
   .our-team-desc {
-    width: 666px;
-    font-size: 20px;
-  }
-
-  .highlight-blue {
-    font-size: 20px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.65;
   }
 
   .team-members-container {
@@ -491,21 +492,20 @@
   }
 
   .our-team {
-    width: 900px;
+    width: 100%;
+    max-width: 920px;
   }
 
   .our-team-title {
-    font-size: 22px;
-    margin-bottom: 8px;
+    font-size: 50px;
+    margin-bottom: 24px;
+    line-height: 1.15;
   }
 
   .our-team-desc {
-    width: 735px;
-    font-size: 20px;
-  }
-
-  .highlight-blue {
-    font-size: 20px;
+    width: 100%;
+    font-size: 19px;
+    line-height: 1.65;
   }
 
   .team-members-container {

@@ -123,7 +123,7 @@ export default function ApproachPage() {
         const textContent = wrapper.querySelector(".text-content");
         if (!funnelImg || !textContent) return;
 
-        // .funnel-wrapper is a real 2-column grid (see approach.css) — its
+        // .funnel-wrapper is a real 2-column grid (see approach.css) - its
         // resting layout (image centered in one column, text filling the
         // other, mirrored for the middle funnel) IS the final design.
         // offsetLeft / offsetWidth reflect that resting position regardless
